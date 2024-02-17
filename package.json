@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "@vercel/edge-config": "^0.4.1",
+    "@vercel/edge-config": "^1.0.0",
     "http-status-codes": "^2.3.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@types/node": "^20.9.0"
+    "@types/node": "^20.11.19"
   }
 }

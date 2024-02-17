@@ -5,7 +5,8 @@ export const config = { runtime: "edge" };
 
 export default async function handler(req: Request) {
   try {
-    const slug = new URL(req.url).searchParams.get("slug") || defaultRedirect();
+    let slug = new URL(req.url).searchParams.get("slug") || defaultRedirect();
+    slug = slug.replace(".", "__DOT__");
     const url = (await get(slug)) || notFound();
     if (typeof url !== "string") notFound();
     return Response.redirect(url, StatusCodes.TEMPORARY_REDIRECT);
