@@ -1,12 +1,12 @@
 lockfileVersion: '6.0'
 
 settings:
-  autoInstallPeers: true
+  autoInstallPeers: false
   excludeLinksFromLockfile: false
 
 dependencies:
   '@vercel/edge-config':
-    specifier: ~1.0.2
+    specifier: ^1.0.2
     version: 1.0.2(typescript@5.3.3)
   http-status-codes:
     specifier: ^2.3.0
