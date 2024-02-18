@@ -5,9 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@opentelemetry/api':
+    specifier: file:./stubs/@opentelemetry/api
+    version: file:stubs/@opentelemetry/api
   '@vercel/edge-config':
     specifier: ^1.0.2
-    version: 1.0.2(typescript@5.3.3)
+    version: 1.0.2(@opentelemetry/api@1.7.0)(typescript@5.3.3)
   http-status-codes:
     specifier: ^2.3.0
     version: 2.3.0
@@ -32,7 +35,7 @@ packages:
     resolution: {integrity: sha512-NRIBwfcS0bUoUbRWlNGetqjvLSwgYH/BqKqDN7vK1g32p7dN96k0712COgaz6VFizAm9b0g6IG6hR6+hc0KCPg==}
     dev: false
 
-  /@vercel/edge-config@1.0.2(typescript@5.3.3):
+  /@vercel/edge-config@1.0.2(@opentelemetry/api@1.7.0)(typescript@5.3.3):
     resolution: {integrity: sha512-HZAlFeDQC4tBonBiPecvV8hWxiNVKADQ6jNfTDCOQzT0VyFA6UTX7yJ1I+94S3KrQC+YEBelqbFFkg4nIFghhQ==}
     engines: {node: '>=14.6'}
     peerDependencies:
@@ -41,6 +44,7 @@ packages:
       '@opentelemetry/api':
         optional: true
     dependencies:
+      '@opentelemetry/api': file:stubs/@opentelemetry/api
       '@vercel/edge-config-fs': 0.1.0
       ts-essentials: 9.4.1(typescript@5.3.3)
     transitivePeerDependencies:
@@ -71,3 +75,8 @@ packages:
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     dev: true
+
+  file:stubs/@opentelemetry/api:
+    resolution: {directory: stubs/@opentelemetry/api, type: directory}
+    name: '@opentelemetry/api'
+    dev: false
