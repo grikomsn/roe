@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@vercel/edge-config": "0.x",
+    "@vercel/edge-config": "~1.0.2",
     "http-status-codes": "^2.3.0",
     "typescript": "^5.3.3"
   },
